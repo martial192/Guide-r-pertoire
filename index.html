@@ -1,0 +1,824 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+	<!-- Google Analytics 4 - Code enrichi -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-NZDBJMMCWT"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){ dataLayer.push(arguments); }
+
+  // Initialisation GA4
+  gtag('js', new Date());
+  gtag('config', 'G-NZDBJMMCWT');
+
+  // Tracking de la page vue
+  gtag('event', 'page_view');
+
+  // ViewContent enrichi
+  gtag('event', 'view_item', {
+    item_id: 'GUIDE_CA_2025',
+    item_name: 'Guide Ultime Pour Immigrer Au Canada',
+    item_category: 'Immigration Francophone',
+    price: 4900,
+    currency: 'XOF',
+    predicted_ltv: 12000
+  });
+
+  document.addEventListener('DOMContentLoaded', function() {
+    // AddToCart enrichi
+    document.querySelectorAll('.btn-ajout-panier').forEach(btn => {
+      btn.addEventListener('click', () => {
+        gtag('event', 'add_to_cart', {
+          item_id: 'GUIDE_CA_2025',
+          item_name: 'Guide Ultime Pour Immigrer Au Canada',
+          quantity: 1,
+          price: 4900,
+          currency: 'XOF'
+        });
+      });
+    });
+
+    // Lead (Inscription Newsletter)
+    document.querySelector('.newsletter-form')?.addEventListener('submit', function(e) {
+      const email = this.querySelector('input[type="email"]').value;
+      if(/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
+        gtag('event', 'generate_lead', {
+          method: 'Newsletter',
+          value: 2.50,
+          currency: 'XOF'
+        });
+      }
+    });
+
+    // Temps actif (ActiveTime)
+    let pageActive = true;
+    setInterval(() => {
+      if(document.visibilityState === 'visible' && pageActive) {
+        gtag('event', 'user_engagement', {
+          engagement_time_msec: 10000
+        });
+      }
+    }, 10000);
+
+    // Engagement scroll
+    const scrollTracking = {
+      '25%': false,
+      '50%': false,
+      '75%': false
+    };
+
+    window.addEventListener('scroll', () => {
+      const scrolled = (window.scrollY + window.innerHeight) / document.documentElement.scrollHeight;
+      Object.keys(scrollTracking).forEach(threshold => {
+        const percent = parseFloat(threshold)/100;
+        if(!scrollTracking[threshold] && scrolled >= percent) {
+          gtag('event', 'scroll_depth', {
+            percent_scrolled: threshold
+          });
+          scrollTracking[threshold] = true;
+        }
+      });
+    });
+  });
+
+  // Durée de session (avant de quitter la page)
+  window.addEventListener('beforeunload', function() {
+    gtag('event', 'session_duration', {
+      duration_seconds: performance.now() / 1000
+    });
+  });
+</script>
+<!-- Fin Google Analytics enrichi -->
+	<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-5FL3LRTP');</script>
+<!-- End Google Tag Manager -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Guide Ultime Pour Immigrer Au Canada | Spécial Afrique Francophone</title>
+    <meta name="description" content="Guide complet et pratique pour réussir votre immigration au Canada depuis l'Afrique francophone. Conseils d'experts, méthode étape par étape et ressources exclusives.">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Balises Open Graph pour le partage social -->
+<meta property="og:type" content="website">
+<meta property="og:title" content="Guide Ultime Pour Immigrer Au Canada | Spécial Afrique Francophone">
+<meta property="og:description" content="La méthode éprouvée pour immigrer au Canada depuis l'Afrique francophone - Même sans expérience préalable">
+<meta property="og:image" content="https://d1yei2z3i6k35z.cloudfront.net/11365804/67ef218caf45f_1001897714.png">
+<meta property="og:url" content="https://votredomaine.com">
+
+<!-- Balises Twitter Card -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Guide Ultime Pour Immigrer Au Canada">
+<meta name="twitter:description" content="La méthode africaine pour réussir son immigration au Canada">
+<meta name="twitter:image" content="https://d1yei2z3i6k35z.cloudfront.net/11365804/67ef218caf45f_1001897714.png">
+
+<!-- Balises complémentaires -->
+<meta name="author" content="Nom de l'auteur">
+<link rel="canonical" href="https://votredomaine.com">
+<meta name="robots" content="index, follow">
+<meta http-equiv="content-language" content="fr-CA">
+    <!-- Font Awesome pour les icônes -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+    	
+    	</style>
+</head>
+<body>
+    <header class="main-header">
+        <div class="container">
+            <nav class="nav-bar">
+                <div class="logo">
+                    <img src="https://d1yei2z3i6k35z.cloudfront.net/11365804/67d37b8fe92b5_Monlogo.jpg" alt="Logo Guide Immigration Canada">
+                </div>
+                <div class="nav-cta">
+                    <a href="#pricing" class="btn btn-primary pulse-animation"></a>
+                </div>
+            </nav>
+            
+            <div class="hero-section">
+                <div class="hero-content">
+                    <span class="hero-badge fade-in">Édition 2025</span>
+                    <h1 class="hero-title slide-in-left">LE GUIDE ULTIME <span class="accent">POUR IMMIGRER AU CANADA</span></h1>
+                    <p class="hero-subtitle fade-in-up">La méthode éprouvée spécialement conçue pour les francophones africains souhaitant s'installer au Canada - <strong>même sans expérience préalable</strong></p>
+                    
+                    <div class="hero-features">
+                        <div class="feature fade-in-up" data-delay="200">
+                            <i class="fas fa-check-circle feature-icon"></i>
+                            <p>Comprendre les différents types de visas</p>
+                        </div>
+                        <div class="feature fade-in-up" data-delay="400">
+                            <i class="fas fa-file-alt feature-icon"></i>
+                            <p>Préparer votre dossier et vos justificatifs</p>
+                        </div>
+                        <div class="feature fade-in-up" data-delay="600">
+                            <i class="fas fa-home feature-icon"></i>
+                            <p>Trouver un logement et un emploi</p>
+                        </div>
+                        <div class="feature fade-in-up" data-delay="800">
+                            <i class="fas fa-users feature-icon"></i>
+                            <p>Connaître les ressources et organismes d'accompagnement</p>
+                        </div>
+                    </div>
+                    
+                    <div class="hero-cta">
+                        <a href="#pricing" class="btn btn-xl btn-primary pulse-animation">Je Veux Immigrer au Canada</a>
+                        <p class="cta-note">Accès immédiat à la version digitale</p>
+                    </div>
+                </div>
+                <div class="hero-image slide-in-right">
+                    <img src="https://d1yei2z3i6k35z.cloudfront.net/11365804/67ef218caf45f_1001897714.png" alt="Guide d'Immigration au Canada pour Francophones Africains">
+                    <div class="floating-badge">
+                        <div class="badge-content">
+                            <span class="badge-main">-66%</span>
+                            <span class="badge-sub">Offre spéciale</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <section class="problem-solution">
+        <div class="container">
+            <div class="section-intro fade-in-up">
+                <h2>L'Immigration au Canada : Une Opportunité <span class="text-highlight">À Saisir</span></h2>
+                <p class="section-subtitle">Découvrez pourquoi tant de candidats africains francophones rencontrent des difficultés et comment vous pouvez réussir</p>
+            </div>
+            
+            <div class="challenges-container">
+                <div class="challenge-card fade-in-up" data-delay="100">
+                    <div class="challenge-icon">
+                        <i class="fas fa-question-circle fa-3x"></i>
+                    </div>
+                    <h3>Démarches Administratives: Un Casse-Tête
+Permanent</h3>
+                    <p>Une seule erreur et ton dossier est blogué pendant des mois. Les règles changent sans cesse, rendant tout encore plus compliqué depuis l'Afrique..</p>
+                </div>
+                <div class="challenge-card fade-in-up" data-delay="300">
+                    <div class="challenge-icon">
+                        <i class="fas fa-file-signature fa-3x"></i>
+                    </div>
+                    <h3>Documents: Un Parcours du Combattant</h3>
+                    <p>Délais interminables, exigences floues, refus injustifiés... Rassembler les bons papiers depuis l'Afrique est une épreuve épuisante..</p>
+                </div>
+                <div class="challenge-card fade-in-up" data-delay="500">
+                    <div class="challenge-icon">
+                        <i class="fas fa-money-bill-wave fa-3x"></i>
+                    </div>
+                    <h3>Arnaques et Faux Espoirs</h3>
+                    <p>Des milliers de personnes se font piéger par des agences peu scrupuleuses. Résultat: promesses vaines, dossiers falsifiés, pertes
+financières... et aucun visa obtenu..</p>
+                </div>
+                <div class="challenge-card fade-in-up" data-delay="700">
+                    <div class="challenge-icon">
+                        <i class="fas fa-ban fa-3x"></i>
+                    </div>
+                    <h3>Refus de Visa Évitable</h3>
+                    <p>Un simple oubli ou un document mal préparé peut tout compromettre. Des mois d'attente, un refus direct et des frais non remboursés - pour une erreur pourtant évitable.</p>
+                </div>
+            </div>
+
+            <div class="solution-box fade-in-up">
+                <h3>La <span class="text-highlight">Solution</span> que tous les africains francophones attendaient</h3>
+                <p>Notre guide d'immigration est spécialement conçu pour les francophones d'Afrique, avec une compréhension approfondie des défis spécifiques que nous rencontrons. Il vous accompagne pas à pas, en français simple, avec des exemples concrets adaptés à la réalité de nos pays.</p>
+                <a href="#pricing" class="btn btn-primary">Découvrir le Guide</a>
+            </div>
+        </div>
+    </section>
+
+    <section class="benefits-section">
+        <div class="container">
+            <div class="section-intro fade-in-up">
+                <h2>Ce que vous <span class="text-highlight">obtiendrez</span></h2>
+                <p class="section-subtitle">Bien plus qu'un simple guide - une méthode complète pour réussir votre immigration</p>
+            </div>
+            
+            <div class="benefits-container">
+                <div class="benefit-card fade-in-up" data-delay="100">
+                    <div class="benefit-icon">
+                        <i class="fas fa-route fa-3x"></i>
+                    </div>
+                    <h3>Feuille de Route Claire</h3>
+                    <p>Un plan d'action chronologique adapté à votre pays d'origine (Sénégal, Côte d'Ivoire, Cameroun, RDC, Mali, etc.)</p>
+                </div>
+                <div class="benefit-card fade-in-up" data-delay="300">
+                    <div class="benefit-icon">
+                        <i class="fas fa-copy fa-3x"></i>
+                    </div>
+                    <h3>Modèles Prêts à l'Emploi</h3>
+                    <p>12 modèles (CV, lettres, formulaires) adaptés au contexte africain et qui fonctionnent auprès des autorités canadiennes.</p>
+                </div>
+                <div class="benefit-card fade-in-up" data-delay="500">
+                    <div class="benefit-icon">
+                        <i class="fas fa-tasks fa-3x"></i>
+                    </div>
+                    <h3>Guides Spécifiques</h3>
+                    <p>Comment faire reconnaître vos diplômes africains, valoriser votre expérience professionnelle et réussir les entretiens d'embauche.</p>
+                </div>
+                <div class="benefit-card fade-in-up" data-delay="700">
+                    <div class="benefit-icon">
+                        <i class="fas fa-calculator fa-3x"></i>
+                    </div>
+                    <h3>Calculateurs Exclusifs</h3>
+                    <p>Évaluez vos chances, estimez votre budget avec nos outils adaptés aux réalités économiques africaines.</p>
+                </div>
+                <div class="benefit-card fade-in-up" data-delay="900">
+                    <div class="benefit-icon">
+                        <i class="fas fa-comments fa-3x"></i>
+                    </div>
+                    <h3>Communauté Privée</h3>
+                    <p>Rejoignez notre groupe Télégramme exclusif d'entraide en pleine construction.</p>
+                </div>
+                <div class="benefit-card fade-in-up" data-delay="1100">
+                    <div class="benefit-icon">
+                        <i class="fas fa-sync fa-3x"></i>
+                    </div>
+                    <h3>Mises à Jour Gratuites</h3>
+                    <p>Recevez automatiquement toutes les mises à jour du guide pendant 2 ans pour rester informé des changements.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="preview-section">
+        <div class="container">
+            <div class="section-intro fade-in-up">
+                <h2>Un aperçu du <span class="text-highlight">contenu du guide</span></h2>
+                <p class="section-subtitle">Plus de 100 pages de contenu pratique téléchargeable, spécifiquement adapté au contexte africain</p>
+            </div>
+            
+            <div class="preview-container">
+                <div class="preview-tabs">
+                    <button class="tab-btn active" data-tab="tab1">Programmes d'Immigration</button>
+                    <button class="tab-btn" data-tab="tab2">Documents Requis</button>
+                    <button class="tab-btn" data-tab="tab3">Recherche d'Emploi</button>
+                    <button class="tab-btn" data-tab="tab4">Installation</button>
+                </div>
+                
+                <div class="preview-content">
+                    <div class="tab-content active" id="tab1">
+                        <div class="content-split">
+                            <div class="content-text">
+                                <h3>Programmes d'Immigration Expliqués Simplement</h3>
+                                <p>Notre guide décompose chaque programme en étapes simples avec des conseils spécifiques pour les candidats africains:</p>
+                                <ul class="content-list">
+                                    <li>Comment maximiser vos points dans Entrée Express même avec des diplômes africains</li>
+                                    <li>Les programmes provinciaux qui favorisent les francophones africains</li>
+                                    <li>Stratégies spéciales pour les pays d'Afrique francophone</li>
+                                    <li>Comment contourner les obstacles spécifiques aux ressortissants africains</li>
+                                    <li>Exemples de profils africains ayant réussi leur immigration</li>
+                                </ul>
+                                <a href="#pricing" class="btn btn-secondary">Accéder au Guide Complet</a>
+                            </div>
+                            <div class="content-image">
+                                <img src="https://d1yei2z3i6k35z.cloudfront.net/11365804/67ef218caf45f_1001897714.png" alt="Aperçu des programmes d'immigration">
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="tab-content" id="tab2">
+                        <div class="content-split">
+                            <div class="content-text">
+                                <h3>Documents Requis et Comment les Obtenir</h3>
+                                <p>Des solutions concrètes pour les défis administratifs propres à nos pays:</p>
+                                <ul class="content-list">
+                                    <li>Comment obtenir des documents officiels dans des administrations parfois difficiles</li>
+                                    <li>Solutions pour les documents impossibles à obtenir dans certains pays</li>
+                                    <li>Comment faire certifier et traduire vos documents à moindre coût</li>
+                                    <li>Alternatives acceptées par les autorités canadiennes</li>
+                                    <li>Comment préparer un dossier qui compense les faiblesses administratives</li>
+                                </ul>
+                                <a href="#pricing" class="btn btn-secondary">Accéder au Guide Complet</a>
+                            </div>
+                            <div class="content-image">
+                                <img src="https://d1yei2z3i6k35z.cloudfront.net/11365804/67ef218caf45f_1001897714.png" alt="Aperçu des documents requis">
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="tab-content" id="tab3">
+                        <div class="content-split">
+                            <div class="content-text">
+                                <h3>Trouver un Emploi au Canada</h3>
+                                <p>Stratégies spécifiques pour les candidats africains:</p>
+                                <ul class="content-list">
+                                    <li>Comment transformer un CV africain en format canadien attractif</li>
+                                    <li>Techniques pour faire reconnaître votre expérience africaine</li>
+                                    <li>Comment réussir des entretiens selon les codes culturels canadiens</li>
+                                    <li>Les secteurs qui recrutent activement des Africains francophones</li>
+                                    <li>Comment obtenir une offre d'emploi depuis l'Afrique</li>
+                                </ul>
+                                <a href="#pricing" class="btn btn-secondary">Accéder au Guide Complet</a>
+                            </div>
+                            <div class="content-image">
+                                <img src="https://d1yei2z3i6k35z.cloudfront.net/11365804/67ef218caf45f_1001897714.png" alt="Aperçu recherche d'emploi">
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="tab-content" id="tab4">
+                        <div class="content-split">
+                            <div class="content-text">
+                                <h3>Installation Réussie au Canada</h3>
+                                <p>Guide pour une transition en douceur de l'Afrique au Canada:</p>
+                                <ul class="content-list">
+                                    <li>Comment préparer votre arrivée (climat, culture, choc culturel)</li>
+                                    <li>Comment trouver un logement sans historique de crédit canadien</li>
+                                    <li>Réseaux communautaires africains dans les principales villes</li>
+                                    <li>Astuces pour économiser lors de votre installation</li>
+                                    <li>Comment s'adapter rapidement au mode de vie canadien</li>
+                                </ul>
+                                <a href="#pricing" class="btn btn-secondary">Accéder au Guide Complet</a>
+                            </div>
+                            <div class="content-image">
+                                <img src="https://d1yei2z3i6k35z.cloudfront.net/11365804/67ef218caf45f_1001897714.png" alt="Aperçu installation">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+            <section class="my-story-section">
+    <div class="container">
+        <div class="section-intro fade-in-up">
+            <h2>Mon <span class="text-highlight">histoire</span> et pourquoi j'ai créé ce guide</h2>
+            <p class="section-subtitle">Comment une expérience douloureuse s'est transformée en mission pour aider les autres</p>
+        </div>
+        
+        <div class="story-container fade-in-up">
+            <div class="story-header">
+                <h3>"On a perdu plus de 3 millions de FCFA dans l'espoir d'un avenir meilleur... mais cette épreuve m'a tout appris."</h3>
+            </div>
+            
+            <div class="story-content">
+                <div class="story-image">
+                    <img src="https://d1yei2z3i6k35z.cloudfront.net/11365804/67ef218caf45f_1001897714.png" alt="Illustration de mon parcours">
+                </div>
+                
+                <div class="story-text">
+                    <p>Je n'oublierai jamais ce jour où ma mère m'a regardé dans les yeux, les mains tremblantes, et m'a dit :</p>
+                    
+                    <blockquote class="highlight-quote">
+                        "J'ai versé l'argent. C'est bon, ils ont dit que ton visa est en cours."
+                    </blockquote>
+                    
+                    <p>Elle y croyait. Elle voulait juste que je parte, que j'aie une vie meilleure.</p>
+                    <p>Elle a confié 1 800 000 FCFA à une agence "reconnue", qui promettait un "visa rapide pour le Canada".</p>
+                    <p>Résultat ? Silence pendant des mois, puis on découvre que le dossier est faux de A à Z.</p>
+                    <p>Elle s'est effondrée. Et moi, avec.</p>
+                    
+                    <p>De mon côté, pensant pouvoir arranger les choses, j'ai continué à chercher des solutions.</p>
+                    <p>Un autre "expert" m'a volé 500 000 FCFA, sans jamais m'envoyer un seul document.</p>
+                    <p>Ensuite, j'ai commis moi-même des erreurs : mauvaises traductions, formulaires mal remplis, choix de mauvais programmes...</p>
+                    
+                    <blockquote class="highlight-quote">
+                        300 000 FCFA encore perdus.
+                    </blockquote>
+                    
+                    <blockquote class="highlight-quote major-quote">
+                        Au total, c'est plus de 3 600 000 FCFA qui sont partis dans le vide.
+                    </blockquote>
+                    
+                    <p>Mais cette douleur, cette frustration, cette injustice… je les ai transformées en force.</p>
+                    <p>Je me suis mis à lire, fouiller, comprendre. J'ai étudié chaque procédure, chaque formulaire, chaque programme.</p>
+                    <p>Pas pour devenir un "expert".</p>
+                    <p>Mais pour ne plus jamais me faire avoir.</p>
+                    <p>Et surtout… pour que d'autres ne vivent pas ce qu'on a vécu.</p>
+                    
+                    <p>Aujourd'hui, je partage tout ce que j'aurais aimé qu'on me dise avant de tout perdre.</p>
+                    <p>Des infos simples, fiables, compréhensibles. Sans langue de bois.</p>
+                    <p>Pas pour vendre du rêve, mais pour éviter les cauchemars.</p>
+                    
+                    <a href="#pricing" class="btn btn-secondary">Découvrir le Guide Complet</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <section id="pricing" class="pricing-section">
+        <div class="container">
+            <div class="section-intro fade-in-up">
+                <h2>Protégez votre <span class="text-highlight">votre rêve canadien</span></h2>
+                <p class="section-subtitle">Mieux vaut investir un peu aujourd'hui que de perdre des millions dans des erreurs évitables. Prenez le bon chemin dès maintenant</p>
+            </div>
+            
+            <div class="pricing-container">
+                <div class="pricing-card popular fade-in-up">
+                    <div class="pricing-badge">Offre Limitée</div>
+                    <h3>Guide Ultime + Bonus Exclusifs</h3>
+                    <div class="pricing-image">
+                        <img src="https://d1yei2z3i6k35z.cloudfront.net/11365804/67ef218caf45f_1001897714.png" alt="Guide Complet d'Immigration">
+                    </div>
+                    <div class="pricing-details">
+                        <div class="price">
+                            <span class="old-price">14.500 FCFA</span>
+                            <span class="current-price">4.900 FCFA</span>
+                        </div>
+                        <p class="price-note">Paiement unique - Accès à vie</p>
+                        
+                        <ul class="pricing-features">
+                            <li><strong>Guide complet</strong> (format PDF)</li>
+                            <li><strong>12 modèles et templates</strong> personnalisables</li>
+                            <li><strong>Calculateurs interactifs</strong> d'admissibilité</li>
+                            <li><strong>Groupe Télégramme exclusif</strong> d'entraide</li>
+                            <li><strong>Mises à jour gratuites</strong> pendant 2 ans</li>
+                            <li class="bonus-item"><strong>BONUS 1:</strong> Liste des entreprises qui recrutent des Africains</li>
+                            <li class="bonus-item"><strong>BONUS 2:</strong> Guide des villes canadiennes pour francophones</li>
+                        </ul>
+                        
+                        <a href="https://uowkorva.mychariow.com/prd_xni6no/checkout" class="btn btn-xl btn-primary pulse-animation">Obtenir le Guide Maintenant</a>
+                        
+                        <div class="payment-methods">
+                            <i class="fas fa-mobile-alt payment-icon"></i>
+                            <p>Paiement mobile et Orange Money acceptés</p>
+                        </div>
+                        
+                        <div class="guarantee">
+                            <i class="fas fa-shield-alt guarantee-icon"></i>
+                            <p><strong>Garantie satisfait ou remboursé 30 jours</strong> - Si vous n'êtes pas entièrement satisfait, nous vous remboursons intégralement.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+<div id="order-form" class="order-section fade-in-up" style="text-align: center; padding: 20px;">
+    <h3>Accédez immédiatement à votre guide</h3>
+
+    <a href="https://uowkorva.mychariow.com/prd_xni6no/checkout" 
+       class="btn btn-xl btn-primary" 
+       style="display: inline-block; margin-top: 20px; padding: 15px 30px; font-size: 18px; font-weight: bold;">
+        Finaliser ma commande
+    </a>
+
+    <div style="margin-top: 25px; display: flex; justify-content: center; gap: 30px; font-size: 16px; color: #444;">
+        <div>
+            <i class="fas fa-lock fa-lg" style="color: green;"></i><br>
+            Paiement sécurisé
+        </div>
+        <div>
+            <i class="fas fa-shield-alt fa-lg" style="color: #007bff;"></i><br>
+            Confiance garantie
+        </div>
+        <div>
+            <i class="fas fa-undo fa-lg" style="color: orange;"></i><br>
+            Satisfait ou remboursé
+        </div>
+    </div>
+</div>
+                            
+                      
+                        </form>
+                    </div>
+                    <div class="order-summary">
+                        <h4>Votre commande</h4>
+                        <div class="summary-product">
+                            <img src="https://d1yei2z3i6k35z.cloudfront.net/11365804/67ef218caf45f_1001897714.png" alt="Guide d'Immigration">
+                            <div class="product-info">
+                                <h5>Guide Ultime Pour Immigrer Au Canada</h5>
+                                <p>Édition 2025 - Spécial Afrique Francophone</p>
+                            </div>
+                        </div>
+                        <div class="summary-details">
+                            <div class="summary-line">
+                                <span>Prix normal</span>
+                                <span>14.500 FCFA</span>
+                            </div>
+                            <div class="summary-line discount">
+                                <span>Réduction</span>
+                                <span>-9.600 FCFA</span>
+                            </div>
+                            <div class="summary-line total">
+                                <span>Total</span>
+                                <span>4.900 FCFA</span>
+                            </div>
+                        </div>
+                        <div class="summary-note">
+                            <div class="timer-container">
+                                <p>Cette offre expire dans:</p>
+                                <div class="countdown-timer">
+                                    <div class="time-unit">
+                                        <span class="count hours">48</span>
+                                        <span class="label">Heures</span>
+                                    </div>
+                                    <div class="time-unit">
+                                        <span class="count minutes">37</span>
+                                        <span class="label">Minutes</span>
+                                    </div>
+                                    <div class="time-unit">
+                                        <span class="count seconds">18</span>
+                                        <span class="label">Secondes</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="faq-section">
+        <div class="container">
+            <div class="section-intro fade-in-up">
+                <h2>Questions <span class="text-highlight">fréquentes</span></h2>
+                <p class="section-subtitle">Les réponses à vos préoccupations</p>
+            </div>
+            
+            <div class="faq-container">
+                <div class="faq-item fade-in-up" data-delay="100">
+                    <div class="faq-question">
+                        <h3>Le guide est-il adapté aux spécificités des pays africains?</h3>
+                        <span class="faq-icon"><i class="fas fa-plus"></i></span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Absolument! Notre guide est spécifiquement conçu pour les ressortissants des pays d'Afrique francophone. Il traite des défis particuliers comme l'obtention des documents officiels, la reconnaissance des diplômes africains, et les stratégies pour surmonter les préjugés que peuvent rencontrer nos dossiers. Il inclut des sections spécifiques pour le Sénégal, la Côte d'Ivoire, le Cameroun, la RDC, le Mali et autres pays francophones.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item fade-in-up" data-delay="300">
+                    <div class="faq-question">
+                        <h3>Comment vais-je recevoir le guide après paiement?</h3>
+                        <span class="faq-icon"><i class="fas fa-plus"></i></span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Immédiatement après votre paiement (par Mobile Money ou carte bancaire), vous recevrez un email avec un lien de téléchargement. Vous pourrez accéder instantanément à la version PDF du guide et à tous les bonus. Le guide est optimisé pour être consulté même sur smartphone avec une connexion internet limitée.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item fade-in-up" data-delay="500">
+                    <div class="faq-question">
+                        <h3>À combien s'élève le budget total pour immigrer au Canada?</h3>
+                        <span class="faq-icon"><i class="fas fa-plus"></i></span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Le guide contient une section détaillée sur les coûts d'immigration avec des estimations réalistes adaptées au contexte africain. Il propose également des stratégies pour minimiser ces coûts et des solutions de financement accessibles depuis l'Afrique. Tout est expliqué en FCFA et en dollars canadiens avec des équivalences claires.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item fade-in-up" data-delay="700">
+                    <div class="faq-question">
+                        <h3>Puis-je demander un remboursement si je ne suis pas satisfait?</h3>
+                        <span class="faq-icon"><i class="fas fa-plus"></i></span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Oui, nous offrons une garantie satisfait ou remboursé de 30 jours. Si vous estimez que le guide ne répond pas à vos attentes, envoyez-nous simplement un email et nous vous rembourserons intégralement, . Notre objectif est votre réussite, pas de vendre un produit qui ne vous aide pas réellement.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item fade-in-up" data-delay="900">
+                    <div class="faq-question">
+                        <h3>Ce guide est-il à jour avec les dernières procédures?</h3>
+                        <span class="faq-icon"><i class="fas fa-plus"></i></span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Oui, cette édition 2025 intègre tous les changements récents dans les politiques d'immigration canadiennes, y compris les nouvelles opportunités pour les francophones africains. Nous mettons à jour le guide régulièrement et vous recevez gratuitement ces mises à jour pendant 2 ans. La dernière mise à jour date d'informations récente en 2025.</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="faq-cta fade-in-up">
+                <p>Vous avez d'autres questions?</p>
+                <a href="https://wa.me/15794001062" class="btn btn-secondary"><i class="fab fa-whatsapp"></i> Contactez-nous sur WhatsApp</a>
+            </div>
+        </div>
+    </section>
+
+    <section class="final-cta">
+        <div class="container">
+            <div class="cta-content fade-in-up">
+                <h2>Prêt à éviter les erreurs qui m'ont coûté plus de<span class="text-highlight">3 million</span> de FCFA? </h2>
+                <p>J'ai appris à mes dépens ce qu'il ne faut surtout pas faire. Aujourd'hui, je partage avec toi un guide clair, simple et honnête pour t'aider à avancer sans te faire avoir.</p>
+                <a href="https://uowkorva.mychariow.com/prd_xni6no/checkout" class="btn btn-xl btn-primary pulse-animation">Obtenez votre Guide à 4.900 FCFA</a>
+                <div class="cta-features">
+                    <div class="cta-feature">
+                        <i class="fas fa-bolt"></i>
+                        <p>Accès immédiat</p>
+                    </div>
+                    <div class="cta-feature">
+                        <i class="fas fa-shield-alt"></i>
+                        <p>Garantie 30 jours</p>
+                    </div>
+                    <div class="cta-feature">
+                        <i class="https://wa.me/15794001062"></i>
+                        <p>Support WhatsApp</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="main-footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <img src="https://d1yei2z3i6k35z.cloudfront.net/11365804/67d37b8fe92b5_Monlogo.jpg" alt="Logo Guide Immigration Canada" width="150">
+                    <p>Un guide clair, honnête et adapté aux réalités africaines pour réussir ton immigration.</p>
+                </div>
+                
+                <div class="footer-links">
+                    <div class="footer-column">
+                        <h4>Liens Rapides</h4>
+                        <ul>
+                            <li><a href="#">Accueil</a></li>
+                            <li><a href="#pricing">Commander le Guide</a></li>
+                            <li><a href="#testimonials">Témoignages</a></li>
+                            <li><a href="#faq">FAQ</a></li>
+                        </ul>
+                    </div>
+                    
+                    <div class="footer-column">
+                        <h4>Aide & Support</h4>
+                        <ul>
+                            <li><a href="#">Contact</a></li>
+                            <li><a href="#">Support WhatsApp</a></li>
+                            <li><a href="#">Politique de Remboursement</a></li>
+                            <li><a href="#">Termes et Conditions</a></li>
+                        </ul>
+                    </div>
+                    
+                    <div class="footer-column">
+                        <h4>Suivez-nous</h4>
+                        <div class="social-icons">
+                            <a href="#" class="social-icon"><i class="fab fa-facebook-f"></i></a>
+                            <a href="#" class="social-icon"><i class="fab fa-youtube"></i></a>
+                            <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
+                            <a href="#" class="social-icon"><i class="fab fa-whatsapp"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2025 Guide Ultime Pour Immigrer Au Canada. Tous droits réservés.</p>
+                <div class="footer-legal">
+                    <a href="#">Politique de Confidentialité</a>
+                    <a href="#">Mentions Légales</a>
+                </div>
+            </div>
+            
+            <div class="disclaimer">
+                <p> Ce guide est basé sur des informations fiables et à jour pour vous aider dans votre projet d'immigration. Les résultats peuvent varier selon votre situation et les lois en vigueur. Suivez les étapes et mettez toutes les chances de votre côté.</p>
+            </div>
+        </div>
+    </footer>
+
+    <div class="floating-cta">
+        <a href="https://uowkorva.mychariow.com/prd_xni6no/checkout" class="btn btn-primary">Obtenir le Guide</a>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/js/all.min.js"></script>
+    <script src="script.js"></script>
+    <script>
+    	<!-- Schema Markup pour Livre/Guide -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Book",
+  "name": "Guide Ultime Pour Immigrer Au Canada",
+  "author": {
+    "@type": "Person",
+    "name": "Nom de l'auteur"
+  },
+  "datePublished": "2025-01-01",
+  "description": "Guide complet d'immigration canadienne pour les francophones africains",
+  "publisher": "Nom de l'éditeur",
+  "image": "https://d1yei2z3i6k35z.cloudfront.net/11365804/67ef218caf45f_1001897714.png",
+  "offers": {
+    "@type": "Offer",
+    "price": "4900",
+    "priceCurrency": "XOF"
+  }
+}
+    </script>
+<!-- Meta Pixel Code Optimisé pour Guide Immigration Canada -->
+<script>
+!function(f,b,e,v,n,t,s){
+  if(f.fbq)return;
+  n=f.fbq=function(){n.callMethod?n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+  if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+  n.queue=[];t=b.createElement(e);t.async=!0;
+  t.src=v;s=b.getElementsByTagName(e)[0];
+  s.parentNode.insertBefore(t,s)
+}(window, document,'script','https://connect.facebook.net/en_US/fbevents.js');
+
+// Initialisation du pixel
+fbq('init', '1400667957768581');
+fbq('track', 'PageView');
+
+// Configuration du ViewContent pour votre produit spécifique
+fbq('track', 'ViewContent', {
+  content_name: 'Guide Ultime Pour Immigrer Au Canada - Édition 2025',
+  content_category: 'Guide Immigration Afrique Francophone',
+  content_ids: ['GUIDE_CANADA_2025'],
+  content_type: 'product',
+  value: 4900,
+  currency: 'XOF'
+});
+
+// Suivi des interactions utilisateur
+document.addEventListener('DOMContentLoaded', function() {
+  // Suivi des clics sur les onglets de prévisualisation
+  document.querySelectorAll('.tab-btn').forEach(tab => {
+    tab.addEventListener('click', function() {
+      fbq('trackCustom', 'ContentView', {
+        content_type: 'preview_tab',
+        content_name: this.textContent.trim()
+      });
+    });
+  });
+
+  // Suivi des ouvertures de FAQ
+  document.querySelectorAll('.faq-question').forEach(question => {
+    question.addEventListener('click', function() {
+      fbq('trackCustom', 'FAQInteraction', {
+        question: this.querySelector('h3')?.textContent.trim() || 'Question inconnue'
+      });
+    });
+  });
+  
+  // Suivi de l'engagement par scroll
+  let scrollDepths = {25: false, 50: false, 75: false, 90: false};
+  window.addEventListener('scroll', function() {
+    const scrollPercent = Math.round((window.scrollY / (document.body.scrollHeight - window.innerHeight)) * 100);
+    
+    Object.keys(scrollDepths).forEach(depth => {
+      if (!scrollDepths[depth] && scrollPercent >= depth) {
+        scrollDepths[depth] = true;
+        fbq('trackCustom', 'ScrollDepth', {
+          depth: depth + '%'
+        });
+      }
+    });
+  });
+  
+  // Suivi du temps passé sur la page
+  let timeOnSite = 0;
+  const timeInterval = setInterval(() => {
+    timeOnSite += 30;
+    if (timeOnSite === 60) {
+      fbq('trackCustom', 'TimeOnPage', {duration: '1min'});
+    } else if (timeOnSite === 180) {
+      fbq('trackCustom', 'TimeOnPage', {duration: '3min'});
+    } else if (timeOnSite === 300) {
+      fbq('trackCustom', 'TimeOnPage', {duration: '5min'});
+      clearInterval(timeInterval);
+    }
+  }, 30000);
+});
+</script>
+<noscript>
+  <img height="1" width="1" style="display:none" 
+       src="https://www.facebook.com/tr?id=1400667957768581&ev=PageView&noscript=1">
+</noscript>
+<!-- Fin du Meta Pixel Code -->	
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-5FL3LRTP"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+</body>
+</html>
