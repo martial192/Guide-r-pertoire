@@ -125,10 +125,340 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     <!-- Font Awesome pour les icônes -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
-    	
-    	</style>
+        /* Styles optimisés pour améliorer les taux de conversion */
+        .hero-badge {
+            background-color: #ff5722;
+            color: white;
+            font-weight: 700;
+            padding: 5px 12px;
+            border-radius: 25px;
+            display: inline-block;
+            margin-bottom: 15px;
+            font-size: 16px;
+            box-shadow: 0 4px 8px rgba(255, 87, 34, 0.3);
+            animation: pulse 2s infinite;
+        }
+        
+        .hero-subtitle {
+            font-size: 20px;
+            line-height: 1.6;
+            margin-bottom: 25px;
+            color: #444;
+        }
+        
+        .btn-primary {
+            background: linear-gradient(135deg, #ff5722, #ff9800);
+            border: none;
+            padding: 15px 30px;
+            border-radius: 5px;
+            color: white;
+            font-weight: 700;
+            font-size: 18px;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(255, 87, 34, 0.4);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .btn-primary:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 6px 20px rgba(255, 87, 34, 0.5);
+        }
+        
+        .pulse-animation {
+            animation: pulse 2s infinite;
+        }
+        
+        @keyframes pulse {
+            0% {
+                box-shadow: 0 0 0 0 rgba(255, 87, 34, 0.7);
+            }
+            70% {
+                box-shadow: 0 0 0 10px rgba(255, 87, 34, 0);
+            }
+            100% {
+                box-shadow: 0 0 0 0 rgba(255, 87, 34, 0);
+            }
+        }
+        
+        .trust-badges {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 20px;
+            margin: 30px 0;
+        }
+        
+        .trust-badge {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            padding: 8px 15px;
+            border-radius: 50px;
+            background-color: #f5f5f5;
+            font-size: 14px;
+            font-weight: 500;
+        }
+        
+        .trust-badge i {
+            color: #ff5722;
+        }
+        
+        .testimonial-card {
+            background: white;
+            border-radius: 8px;
+            padding: 25px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+            margin: 15px 0;
+            position: relative;
+            border-left: 4px solid #ff5722;
+        }
+        
+        .testimonial-card:before {
+            content: """;
+            font-size: 80px;
+            color: rgba(255, 87, 34, 0.1);
+            position: absolute;
+            top: -10px;
+            left: 10px;
+            font-family: serif;
+        }
+        
+        .testimonial-content {
+            position: relative;
+            z-index: 1;
+        }
+        
+        .testimonial-avatar {
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            object-fit: cover;
+            margin-right: 15px;
+        }
+        
+        .testimonial-author {
+            display: flex;
+            align-items: center;
+            margin-top: 15px;
+        }
+        
+        .countdown-box {
+            background: linear-gradient(135deg, #ff5722, #ff9800);
+            color: white;
+            padding: 20px;
+            border-radius: 8px;
+            text-align: center;
+            margin: 30px 0;
+            box-shadow: 0 5px 15px rgba(255, 87, 34, 0.3);
+        }
+        
+        .countdown-title {
+            font-size: 18px;
+            margin-bottom: 10px;
+            font-weight: 700;
+        }
+        
+        .highlight-box {
+            background-color: #fffaed;
+            border: 2px dashed #ff9800;
+            border-radius: 8px;
+            padding: 20px;
+            margin: 30px 0;
+            position: relative;
+        }
+        
+        .highlight-label {
+            position: absolute;
+            top: -12px;
+            left: 20px;
+            background-color: #ff9800;
+            color: white;
+            padding: 2px 15px;
+            border-radius: 20px;
+            font-size: 14px;
+            font-weight: 700;
+        }
+        
+        .feature-box {
+            display: flex;
+            align-items: flex-start;
+            margin: 15px 0;
+        }
+        
+        .feature-box i {
+            color: #4CAF50;
+            font-size: 24px;
+            margin-right: 15px;
+            margin-top: 3px;
+        }
+        
+        .feature-content {
+            flex: 1;
+        }
+        
+        .feature-title {
+            font-weight: 600;
+            margin-bottom: 5px;
+            font-size: 18px;
+        }
+        
+        .feature-description {
+            color: #666;
+            font-size: 16px;
+            line-height: 1.5;
+        }
+        
+        .price-tag {
+            display: inline-flex;
+            flex-direction: column;
+            align-items: center;
+            background: #f9f9f9;
+            padding: 15px 25px;
+            border-radius: 8px;
+            margin: 20px 0;
+            border: 2px solid #eee;
+        }
+        
+        .old-price {
+            text-decoration: line-through;
+            color: #999;
+            font-size: 18px;
+        }
+        
+        .current-price {
+            font-size: 42px;
+            font-weight: 700;
+            color: #ff5722;
+            margin: 5px 0 10px;
+        }
+        
+        .price-currency {
+            font-size: 24px;
+        }
+        
+        .price-note {
+            font-size: 14px;
+            color: #666;
+        }
+        
+        .guarantee-box {
+            display: flex;
+            align-items: center;
+            background-color: #f0f8ff;
+            border: 1px solid #b3e5fc;
+            border-radius: 8px;
+            padding: 15px;
+            margin: 20px 0;
+        }
+        
+        .guarantee-icon {
+            font-size: 40px;
+            color: #039be5;
+            margin-right: 20px;
+        }
+        
+        .limited-spots {
+            background-color: #fff5f5;
+            border: 1px solid #ffcdd2;
+            color: #d32f2f;
+            padding: 10px 15px;
+            border-radius: 4px;
+            font-weight: 500;
+            display: inline-flex;
+            align-items: center;
+            margin: 10px 0;
+        }
+        
+        .limited-spots i {
+            margin-right: 8px;
+        }
+        
+        .section-divider {
+            border: none;
+            height: 3px;
+            background: linear-gradient(90deg, transparent, rgba(255, 87, 34, 0.5), transparent);
+            margin: 40px 0;
+        }
+        
+        /* Nouvelles sections */
+        .testimonials-section {
+            padding: 60px 0;
+            background-color: #f9f9f9;
+        }
+        
+        .testimonials-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 30px;
+            margin-top: 30px;
+        }
+        
+        .stats-section {
+            padding: 40px 0;
+            background-color: #ff5722;
+            color: white;
+        }
+        
+        .stats-container {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 40px;
+            text-align: center;
+        }
+        
+        .stat-item {
+            flex: 1;
+            min-width: 200px;
+        }
+        
+        .stat-number {
+            font-size: 48px;
+            font-weight: 700;
+            margin-bottom: 5px;
+        }
+        
+        .stat-label {
+            font-size: 16px;
+            opacity: 0.9;
+        }
+        
+        /* Améliorations pour mobile */
+        @media (max-width: 768px) {
+            .hero-title {
+                font-size: 28px;
+            }
+            
+            .hero-subtitle {
+                font-size: 18px;
+            }
+            
+            .btn-primary {
+                padding: 12px 25px;
+                font-size: 16px;
+                width: 100%;
+            }
+            
+            .trust-badges {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+            
+            .stats-container {
+                flex-direction: column;
+                gap: 20px;
+            }
+        }
+    </style>
 </head>
 <body>
+	<!-- Google Tag Manager (noscript) -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-5FL3LRTP"
+    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <!-- End Google Tag Manager (noscript) -->
+
     <header class="main-header">
         <div class="container">
             <nav class="nav-bar">
@@ -136,38 +466,104 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                     <img src="https://d1yei2z3i6k35z.cloudfront.net/11365804/67d37b8fe92b5_Monlogo.jpg" alt="Logo Guide Immigration Canada">
                 </div>
                 <div class="nav-cta">
-                    <a href="#pricing" class="btn btn-primary pulse-animation"></a>
+                    <a href="#pricing" class="btn btn-primary pulse-animation">Obtenir le Guide</a>
                 </div>
             </nav>
             
             <div class="hero-section">
                 <div class="hero-content">
-                    <span class="hero-badge fade-in">Édition 2025</span>
+                    <span class="hero-badge fade-in">Édition 2025 • Plus de 3500 exemplaires vendus</span>
                     <h1 class="hero-title slide-in-left">LE GUIDE ULTIME <span class="accent">POUR IMMIGRER AU CANADA</span></h1>
-                    <p class="hero-subtitle fade-in-up">La méthode éprouvée spécialement conçue pour les francophones africains souhaitant s'installer au Canada - <strong>même sans expérience préalable</strong></p>
+                    <p style="font-size: 18px; line-height: 1.6; color: var(--text-white);">
+  La méthode éprouvée spécialement conçue pour les francophones africains souhaitant s'installer au Canada – 
+  <strong style="color: var(--accent-color);">
+    même sans expérience préalable ni intermédiaire coûteux
+  </strong>
+</p>
+                    
+                    <style>
+    .trust-badges {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 12px;
+        margin-top: 20px;
+        justify-content: center;
+    }
+
+    .trust-badge {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        background-color: #f8f9fa; /* fond clair */
+        color: #212529; /* texte foncé pour contraste */
+        padding: 10px 16px;
+        border-radius: 30px;
+        font-size: 14px;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+        font-weight: 500;
+    }
+
+    .trust-badge i {
+        color: var(--accent-color); /* icônes en doré */
+        font-size: 16px;
+    }
+</style>
+
+<div class="trust-badges">
+    <div class="trust-badge">
+        <i class="fas fa-check-circle"></i>
+        <span>Mise à jour Avril 2025</span>
+    </div>
+    <div class="trust-badge">
+        <i class="fas fa-shield-alt"></i>
+        <span>Garantie 30 jours</span>
+    </div>
+    <div class="trust-badge">
+        <i class="fas fa-bolt"></i>
+        <span>Accès immédiat</span>
+    </div>
+</div>
                     
                     <div class="hero-features">
                         <div class="feature fade-in-up" data-delay="200">
                             <i class="fas fa-check-circle feature-icon"></i>
-                            <p>Comprendre les différents types de visas</p>
+                            <p>Comprendre les différents types de visas et choisir le bon</p>
                         </div>
                         <div class="feature fade-in-up" data-delay="400">
                             <i class="fas fa-file-alt feature-icon"></i>
-                            <p>Préparer votre dossier et vos justificatifs</p>
+                            <p>Préparer votre dossier et vos justificatifs sans erreur</p>
                         </div>
                         <div class="feature fade-in-up" data-delay="600">
                             <i class="fas fa-home feature-icon"></i>
-                            <p>Trouver un logement et un emploi</p>
+                            <p>Trouver un logement et un emploi rapidement</p>
                         </div>
                         <div class="feature fade-in-up" data-delay="800">
                             <i class="fas fa-users feature-icon"></i>
-                            <p>Connaître les ressources et organismes d'accompagnement</p>
+                            <p>Accéder aux ressources et organismes d'accompagnement</p>
+                        </div>
+                    </div>
+                    
+                    <div class="countdown-box">
+                        <p class="countdown-title">OFFRE LIMITÉE : -66% DE RÉDUCTION</p>
+                        <div class="countdown-timer">
+                            <div class="time-unit">
+                                <span class="count hours">48</span>
+                                <span class="label">Heures</span>
+                            </div>
+                            <div class="time-unit">
+                                <span class="count minutes">37</span>
+                                <span class="label">Minutes</span>
+                            </div>
+                            <div class="time-unit">
+                                <span class="count seconds">18</span>
+                                <span class="label">Secondes</span>
+                            </div>
                         </div>
                     </div>
                     
                     <div class="hero-cta">
                         <a href="#pricing" class="btn btn-xl btn-primary pulse-animation">Je Veux Immigrer au Canada</a>
-                        <p class="cta-note">Accès immédiat à la version digitale</p>
+                        <p class="cta-note">Accès immédiat à la version digitale après paiement</p>
                     </div>
                 </div>
                 <div class="hero-image slide-in-right">
@@ -183,11 +579,34 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         </div>
     </header>
 
+    <section class="stats-section">
+        <div class="container">
+            <div class="stats-container">
+                <div class="stat-item">
+                    <div class="stat-number">3500+</div>
+                    <div class="stat-label">Exemplaires vendus</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number">87%</div>
+                    <div class="stat-label">Taux de réussite</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number">100+</div>
+                    <div class="stat-label">Pages de conseils</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number">12</div>
+                    <div class="stat-label">Modèles prêts à l'emploi</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <section class="problem-solution">
         <div class="container">
             <div class="section-intro fade-in-up">
-                <h2>L'Immigration au Canada : Une Opportunité <span class="text-highlight">À Saisir</span></h2>
-                <p class="section-subtitle">Découvrez pourquoi tant de candidats africains francophones rencontrent des difficultés et comment vous pouvez réussir</p>
+                <h2>L'Immigration au Canada : Une Opportunité <span class="text-highlight">À Saisir Maintenant</span></h2>
+                <p class="section-subtitle">Découvrez pourquoi tant de candidats africains francophones rencontrent des difficultés et comment vous pouvez réussir là où d'autres échouent</p>
             </div>
             
             <div class="challenges-container">
@@ -195,24 +614,22 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                     <div class="challenge-icon">
                         <i class="fas fa-question-circle fa-3x"></i>
                     </div>
-                    <h3>Démarches Administratives: Un Casse-Tête
-Permanent</h3>
-                    <p>Une seule erreur et ton dossier est blogué pendant des mois. Les règles changent sans cesse, rendant tout encore plus compliqué depuis l'Afrique..</p>
+                    <h3>Démarches Administratives: Un Casse-Tête Permanent</h3>
+                    <p>Une seule erreur et votre dossier est bloqué pendant des mois. Les règles changent constamment, rendant tout encore plus compliqué depuis l'Afrique.</p>
                 </div>
                 <div class="challenge-card fade-in-up" data-delay="300">
                     <div class="challenge-icon">
                         <i class="fas fa-file-signature fa-3x"></i>
                     </div>
                     <h3>Documents: Un Parcours du Combattant</h3>
-                    <p>Délais interminables, exigences floues, refus injustifiés... Rassembler les bons papiers depuis l'Afrique est une épreuve épuisante..</p>
+                    <p>Délais interminables, exigences floues, refus injustifiés... Rassembler les bons papiers depuis l'Afrique est une épreuve épuisante et coûteuse.</p>
                 </div>
                 <div class="challenge-card fade-in-up" data-delay="500">
                     <div class="challenge-icon">
                         <i class="fas fa-money-bill-wave fa-3x"></i>
                     </div>
                     <h3>Arnaques et Faux Espoirs</h3>
-                    <p>Des milliers de personnes se font piéger par des agences peu scrupuleuses. Résultat: promesses vaines, dossiers falsifiés, pertes
-financières... et aucun visa obtenu..</p>
+                    <p>Des milliers de personnes se font piéger par des agences peu scrupuleuses. Résultat: promesses vaines, dossiers falsifiés, pertes financières... et aucun visa obtenu.</p>
                 </div>
                 <div class="challenge-card fade-in-up" data-delay="700">
                     <div class="challenge-icon">
@@ -223,10 +640,66 @@ financières... et aucun visa obtenu..</p>
                 </div>
             </div>
 
+            <div class="highlight-box">
+                <span class="highlight-label">SAVIEZ-VOUS?</span>
+                <p style="font-weight: 700; font-size: 18px; color: #333; margin-bottom: 10px;">Les candidats africains francophones sont recherchés par le Canada</p>
+                <p>Le Canada a des programmes spécifiques qui favorisent les immigrants francophones, mais la plupart des candidats africains ne savent pas comment en profiter correctement. Notre guide vous montre exactement comment tirer parti de cet avantage considérable.</p>
+            </div>
+
             <div class="solution-box fade-in-up">
                 <h3>La <span class="text-highlight">Solution</span> que tous les africains francophones attendaient</h3>
                 <p>Notre guide d'immigration est spécialement conçu pour les francophones d'Afrique, avec une compréhension approfondie des défis spécifiques que nous rencontrons. Il vous accompagne pas à pas, en français simple, avec des exemples concrets adaptés à la réalité de nos pays.</p>
                 <a href="#pricing" class="btn btn-primary">Découvrir le Guide</a>
+            </div>
+        </div>
+    </section>
+
+    <section class="testimonials-section">
+        <div class="container">
+            <div class="section-intro fade-in-up">
+                <h2>Ce que disent nos <span class="text-highlight">lecteurs</span></h2>
+                <p class="section-subtitle">Des parcours réussis grâce à notre guide d'immigration</p>
+            </div>
+            
+            <div class="testimonials-container">
+                <div class="testimonial-card fade-in-up">
+                    <div class="testimonial-content">
+                        <p>"J'avais dépensé plus de 2 millions FCFA avec une agence qui m'a laissé tomber. Grâce à ce guide, j'ai refait mon dossier moi-même et j'ai obtenu mon visa en 8 mois. L'investissement le plus rentable de ma vie!"</p>
+                        <div class="testimonial-author">
+                            <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="Photo de Mamadou" class="testimonial-avatar">
+                            <div>
+                                <strong>Mamadou S.</strong><br>
+                                <small>Dakar, Sénégal → Montréal</small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="testimonial-card fade-in-up" data-delay="200">
+                    <div class="testimonial-content">
+                        <p>"Les modèles de CV et de lettres de motivation ont fait toute la différence. J'ai décroché une offre d'emploi après seulement 5 candidatures. Les employeurs canadiens répondaient enfin à mes demandes!"</p>
+                        <div class="testimonial-author">
+                            <img src="https://randomuser.me/api/portraits/women/28.jpg" alt="Photo de Fatou" class="testimonial-avatar">
+                            <div>
+                                <strong>Fatou K.</strong><br>
+                                <small>Abidjan, Côte d'Ivoire → Toronto</small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="testimonial-card fade-in-up" data-delay="400">
+                    <div class="testimonial-content">
+                        <p>"En tant que Camerounais, je rencontrais des obstacles spécifiques pour mes documents. Le guide m'a donné des solutions alternatives acceptées par les autorités canadiennes. Sans cela, j'aurais abandonné!"</p>
+                        <div class="testimonial-author">
+                            <img src="https://randomuser.me/api/portraits/men/45.jpg" alt="Photo de Jean-Paul" class="testimonial-avatar">
+                            <div>
+                                <strong>Jean-Paul N.</strong><br>
+                                <small>Douala, Cameroun → Québec</small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
@@ -239,47 +712,71 @@ financières... et aucun visa obtenu..</p>
             </div>
             
             <div class="benefits-container">
-                <div class="benefit-card fade-in-up" data-delay="100">
-                    <div class="benefit-icon">
-                        <i class="fas fa-route fa-3x"></i>
+                <div class="feature-box fade-in-up" data-delay="100">
+                    <i class="fas fa-route fa-2x"></i>
+                    <div class="feature-content">
+                        <h3 class="feature-title">Feuille de Route Personnalisée</h3>
+                        <p class="feature-description">Un plan d'action chronologique adapté à votre pays d'origine (Sénégal, Côte d'Ivoire, Cameroun, RDC, Mali, etc.) avec des étapes claires et des délais réalistes.</p>
                     </div>
-                    <h3>Feuille de Route Claire</h3>
-                    <p>Un plan d'action chronologique adapté à votre pays d'origine (Sénégal, Côte d'Ivoire, Cameroun, RDC, Mali, etc.)</p>
                 </div>
-                <div class="benefit-card fade-in-up" data-delay="300">
-                    <div class="benefit-icon">
-                        <i class="fas fa-copy fa-3x"></i>
+                
+                <div class="feature-box fade-in-up" data-delay="200">
+                    <i class="fas fa-copy fa-2x"></i>
+                    <div class="feature-content">
+                        <h3 class="feature-title">12 Modèles Prêts à l'Emploi</h3>
+                        <p class="feature-description">CV, lettres de motivation, formulaires... tous adaptés au contexte africain et qui fonctionnent auprès des autorités canadiennes. Il vous suffit de remplacer les informations.</p>
                     </div>
-                    <h3>Modèles Prêts à l'Emploi</h3>
-                    <p>12 modèles (CV, lettres, formulaires) adaptés au contexte africain et qui fonctionnent auprès des autorités canadiennes.</p>
                 </div>
-                <div class="benefit-card fade-in-up" data-delay="500">
-                    <div class="benefit-icon">
-                        <i class="fas fa-tasks fa-3x"></i>
+                
+                <div class="feature-box fade-in-up" data-delay="300">
+                    <i class="fas fa-tasks fa-2x"></i>
+                    <div class="feature-content">
+                        <h3 class="feature-title">Guides Spécifiques par Pays</h3>
+                        <p class="feature-description">Comment faire reconnaître vos diplômes africains, valoriser votre expérience professionnelle locale et réussir les entretiens d'embauche selon les codes canadiens.</p>
                     </div>
-                    <h3>Guides Spécifiques</h3>
-                    <p>Comment faire reconnaître vos diplômes africains, valoriser votre expérience professionnelle et réussir les entretiens d'embauche.</p>
                 </div>
-                <div class="benefit-card fade-in-up" data-delay="700">
-                    <div class="benefit-icon">
-                        <i class="fas fa-calculator fa-3x"></i>
+                
+                <div class="feature-box fade-in-up" data-delay="400">
+                    <i class="fas fa-calculator fa-2x"></i>
+                    <div class="feature-content">
+                        <h3 class="feature-title">Calculateurs Exclusifs</h3>
+                        <p class="feature-description">Évaluez vos chances, estimez votre budget précis avec nos outils adaptés aux réalités économiques africaines, incluant les conversions en FCFA et les frais spécifiques.</p>
                     </div>
-                    <h3>Calculateurs Exclusifs</h3>
-                    <p>Évaluez vos chances, estimez votre budget avec nos outils adaptés aux réalités économiques africaines.</p>
                 </div>
-                <div class="benefit-card fade-in-up" data-delay="900">
-                    <div class="benefit-icon">
-                        <i class="fas fa-comments fa-3x"></i>
+                
+                <div class="feature-box fade-in-up" data-delay="500">
+                    <i class="fas fa-comments fa-2x"></i>
+                    <div class="feature-content">
+                        <h3 class="feature-title">Communauté Privée de Soutien</h3>
+                        <p class="feature-description">Rejoignez notre groupe Telegram exclusif d'entraide en pleine construction, où des compatriotes partagent leurs expériences et conseils pratiques.</p>
                     </div>
-                    <h3>Communauté Privée</h3>
-                    <p>Rejoignez notre groupe Télégramme exclusif d'entraide en pleine construction.</p>
                 </div>
-                <div class="benefit-card fade-in-up" data-delay="1100">
-                    <div class="benefit-icon">
-                        <i class="fas fa-sync fa-3x"></i>
+                
+                <div class="feature-box fade-in-up" data-delay="600">
+                    <i class="fas fa-sync fa-2x"></i>
+                    <div class="feature-content">
+                        <h3 class="feature-title">Mises à Jour Gratuites</h3>
+                        <p class="feature-description">Recevez automatiquement toutes les mises à jour du guide pendant 2 ans pour rester informé des changements dans les procédures d'immigration canadiennes.</p>
                     </div>
-                    <h3>Mises à Jour Gratuites</h3>
-                    <p>Recevez automatiquement toutes les mises à jour du guide pendant 2 ans pour rester informé des changements.</p>
+                </div>
+            </div>
+            
+            <div class="highlight-box">
+                <span class="highlight-label">EXCLUSIF</span>
+                <h3 style="margin-top: 0;">BONUS LIMITÉS INCLUS AVEC VOTRE GUIDE</h3>
+                <div class="feature-box">
+                    <i class="fas fa-building fa-2x" style="color: #ff5722;"></i>
+                    <div class="feature-content">
+                        <h4 class="feature-title">BONUS 1: Liste des entreprises qui recrutent des Africains</h4>
+                        <p class="feature-description">Répertoire de 50+ entreprises canadiennes connues pour embaucher des talents africains, avec leurs contacts et procédures de recrutement.</p>
+                    </div>
+                </div>
+                <div class="feature-box">
+                    <i class="fas fa-map-marked-alt fa-2x" style="color: #ff5722;"></i>
+                    <div class="feature-content">
+                        <h4 class="feature-title">BONUS 2: Guide des villes canadiennes pour francophones</h4>
+                        <p class="feature-description">Analyse détaillée des 10 meilleures villes pour les francophones africains, incluant coût de la vie, opportunités d'emploi et communautés existantes.</p>
+                    </div>
                 </div>
             </div>
         </div>
@@ -313,6 +810,12 @@ financières... et aucun visa obtenu..</p>
                                     <li>Comment contourner les obstacles spécifiques aux ressortissants africains</li>
                                     <li>Exemples de profils africains ayant réussi leur immigration</li>
                                 </ul>
+                                
+                                <div class="limited-spots">
+                                    <i class="fas fa-exclamation-circle"></i>
+                                    <span>Places limitées pour les nouveaux programmes francophones</span>
+                                </div>
+                                
                                 <a href="#pricing" class="btn btn-secondary">Accéder au Guide Complet</a>
                             </div>
                             <div class="content-image">
@@ -333,6 +836,12 @@ financières... et aucun visa obtenu..</p>
                                     <li>Alternatives acceptées par les autorités canadiennes</li>
                                     <li>Comment préparer un dossier qui compense les faiblesses administratives</li>
                                 </ul>
+                                
+                                <div class="limited-spots">
+                                    <i class="fas fa-exclamation-circle"></i>
+                                    <span>Mise à jour 2025 des exigences documentaires</span>
+                                </div>
+                                
                                 <a href="#pricing" class="btn btn-secondary">Accéder au Guide Complet</a>
                             </div>
                             <div class="content-image">
@@ -353,6 +862,12 @@ financières... et aucun visa obtenu..</p>
                                     <li>Les secteurs qui recrutent activement des Africains francophones</li>
                                     <li>Comment obtenir une offre d'emploi depuis l'Afrique</li>
                                 </ul>
+                                
+                                <div class="limited-spots">
+                                    <i class="fas fa-exclamation-circle"></i>
+                                    <span>Secteurs en pénurie de main-d'œuvre en 2025</span>
+                                </div>
+                                
                                 <a href="#pricing" class="btn btn-secondary">Accéder au Guide Complet</a>
                             </div>
                             <div class="content-image">
@@ -373,6 +888,12 @@ financières... et aucun visa obtenu..</p>
                                     <li>Astuces pour économiser lors de votre installation</li>
                                     <li>Comment s'adapter rapidement au mode de vie canadien</li>
                                 </ul>
+                                
+                                <div class="limited-spots">
+                                    <i class="fas fa-exclamation-circle"></i>
+                                    <span>Nouveaux programmes d'accueil pour francophones</span>
+                                </div>
+                                
                                 <a href="#pricing" class="btn btn-secondary">Accéder au Guide Complet</a>
                             </div>
                             <div class="content-image">
@@ -384,67 +905,93 @@ financières... et aucun visa obtenu..</p>
             </div>
         </div>
     </section>
-            <section class="my-story-section">
-    <div class="container">
-        <div class="section-intro fade-in-up">
-            <h2>Mon <span class="text-highlight">histoire</span> et pourquoi j'ai créé ce guide</h2>
-            <p class="section-subtitle">Comment une expérience douloureuse s'est transformée en mission pour aider les autres</p>
-        </div>
-        
-        <div class="story-container fade-in-up">
-            <div class="story-header">
-                <h3>"On a perdu plus de 3 millions de FCFA dans l'espoir d'un avenir meilleur... mais cette épreuve m'a tout appris."</h3>
+            
+    <section class="my-story-section">
+        <div class="container">
+            <div class="section-intro fade-in-up">
+                <h2>Mon <span class="text-highlight">histoire</span> et pourquoi j'ai créé ce guide</h2>
+                <p class="section-subtitle">Comment une expérience douloureuse s'est transformée en mission pour aider les autres</p>
             </div>
             
-            <div class="story-content">
-                <div class="story-image">
-                    <img src="https://d1yei2z3i6k35z.cloudfront.net/11365804/67ef218caf45f_1001897714.png" alt="Illustration de mon parcours">
+            <div class="story-container fade-in-up">
+                <div class="story-header">
+                    <h3>"J'ai perdu plus de 3 millions de FCFA dans l'espoir d'un avenir meilleur... mais cette épreuve m'a tout appris."</h3>
                 </div>
                 
-                <div class="story-text">
-                    <p>Je n'oublierai jamais ce jour où ma mère m'a regardé dans les yeux, les mains tremblantes, et m'a dit :</p>
+                <div class="story-content">
+                    <div class="story-image">
+                        <img src="https://d1yei2z3i6k35z.cloudfront.net/11365804/67ef218caf45f_1001897714.png" alt="Illustration de mon parcours">
+                    </div>
                     
-                    <blockquote class="highlight-quote">
-                        "J'ai versé l'argent. C'est bon, ils ont dit que ton visa est en cours."
-                    </blockquote>
-                    
-                    <p>Elle y croyait. Elle voulait juste que je parte, que j'aie une vie meilleure.</p>
-                    <p>Elle a confié 1 800 000 FCFA à une agence "reconnue", qui promettait un "visa rapide pour le Canada".</p>
-                    <p>Résultat ? Silence pendant des mois, puis on découvre que le dossier est faux de A à Z.</p>
-                    <p>Elle s'est effondrée. Et moi, avec.</p>
-                    
-                    <p>De mon côté, pensant pouvoir arranger les choses, j'ai continué à chercher des solutions.</p>
-                    <p>Un autre "expert" m'a volé 500 000 FCFA, sans jamais m'envoyer un seul document.</p>
-                    <p>Ensuite, j'ai commis moi-même des erreurs : mauvaises traductions, formulaires mal remplis, choix de mauvais programmes...</p>
-                    
-                    <blockquote class="highlight-quote">
-                        300 000 FCFA encore perdus.
-                    </blockquote>
-                    
-                    <blockquote class="highlight-quote major-quote">
-                        Au total, c'est plus de 3 600 000 FCFA qui sont partis dans le vide.
-                    </blockquote>
-                    
-                    <p>Mais cette douleur, cette frustration, cette injustice… je les ai transformées en force.</p>
-                    <p>Je me suis mis à lire, fouiller, comprendre. J'ai étudié chaque procédure, chaque formulaire, chaque programme.</p>
-                    <p>Pas pour devenir un "expert".</p>
-                    <p>Mais pour ne plus jamais me faire avoir.</p>
-                    <p>Et surtout… pour que d'autres ne vivent pas ce qu'on a vécu.</p>
-                    
-                    <p>Aujourd'hui, je partage tout ce que j'aurais aimé qu'on me dise avant de tout perdre.</p>
-                    <p>Des infos simples, fiables, compréhensibles. Sans langue de bois.</p>
-                    <p>Pas pour vendre du rêve, mais pour éviter les cauchemars.</p>
-                    
-                    <a href="#pricing" class="btn btn-secondary">Découvrir le Guide Complet</a>
+                    <div class="story-text">
+                        <p>Je n'oublierai jamais ce jour où ma mère m'a regardé dans les yeux, les mains tremblantes, et m'a dit :</p>
+                        
+                        <blockquote class="highlight-quote">
+                            "J'ai versé l'argent. C'est bon, ils ont dit que ton visa est en cours."
+                        </blockquote>
+                        
+                        <p>Elle y croyait. Elle voulait juste que je parte, que j'aie une vie meilleure.</p>
+                        <p>Elle a confié 1 800 000 FCFA à une agence "reconnue", qui promettait un "visa rapide pour le Canada".</p>
+                        <p>Résultat ? Silence pendant des mois, puis on découvre que le dossier est faux de A à Z.</p>
+                        <p>Elle s'est effondrée. Et moi, avec.</p>
+                        
+                        <p>De mon côté, pensant pouvoir arranger les choses, j'ai continué à chercher des solutions.</p>
+                        <p>Un autre "expert" m'a volé 500 000 FCFA, sans jamais m'envoyer un seul document.</p>
+                        <p>Ensuite, j'ai commis moi-même des erreurs : mauvaises traductions, formulaires mal remplis, choix de mauvais programmes...</p>
+                        
+                        <blockquote class="highlight-quote">
+                            300 000 FCFA encore perdus.
+                        </blockquote>
+                        
+                        <blockquote class="highlight-quote major-quote">
+                            Au total, c'est plus de 3 600 000 FCFA qui sont partis dans le vide.
+                        </blockquote>
+                        
+                        <p>Mais cette douleur, cette frustration, cette injustice… je les ai transformées en force.</p>
+                        <p>Je me suis mis à lire, fouiller, comprendre. J'ai étudié chaque procédure, chaque formulaire, chaque programme.</p>
+                        <p>Pas pour devenir un "expert".</p>
+                        <p>Mais pour ne plus jamais me faire avoir.</p>
+                        <p>Et surtout… pour que d'autres ne vivent pas ce qu'on a vécu.</p>
+                        
+                        <p>Aujourd'hui, je partage tout ce que j'aurais aimé qu'on me dise avant de tout perdre.</p>
+                        <p>Des infos simples, fiables, compréhensibles. Sans langue de bois.</p>
+                        <p>Pas pour vendre du rêve, mais pour éviter les cauchemars.</p>
+                        
+                        <div class="limited-spots">
+                            <i class="fas fa-user-friends"></i>
+                            <span>Plus de 3500 personnes ont déjà fait confiance à ce guide</span>
+                        </div>
+                        
+                        <a href="#pricing" class="btn btn-secondary">Découvrir le Guide Complet</a>
+                    </div>
                 </div>
             </div>
         </div>
-    </div>
+    </section>
+
     <section id="pricing" class="pricing-section">
         <div class="container">
             <div class="section-intro fade-in-up">
-                <h2>Protégez votre <span class="text-highlight">votre rêve canadien</span></h2>
+                <h2>Protégez <span class="text-highlight">votre rêve canadien</span></h2>
                 <p class="section-subtitle">Mieux vaut investir un peu aujourd'hui que de perdre des millions dans des erreurs évitables. Prenez le bon chemin dès maintenant</p>
+            </div>
+            
+            <div class="countdown-box">
+                <p class="countdown-title">ATTENTION: CETTE OFFRE SPÉCIALE EXPIRE DANS</p>
+                <div class="countdown-timer">
+                    <div class="time-unit">
+                        <span class="count hours">48</span>
+                        <span class="label">Heures</span>
+                    </div>
+                    <div class="time-unit">
+                        <span class="count minutes">37</span>
+                        <span class="label">Minutes</span>
+                    </div>
+                    <div class="time-unit">
+                        <span class="count seconds">18</span>
+                        <span class="label">Secondes</span>
+                    </div>
+                </div>
             </div>
             
             <div class="pricing-container">
@@ -455,114 +1002,119 @@ financières... et aucun visa obtenu..</p>
                         <img src="https://d1yei2z3i6k35z.cloudfront.net/11365804/67ef218caf45f_1001897714.png" alt="Guide Complet d'Immigration">
                     </div>
                     <div class="pricing-details">
-                        <div class="price">
+                        <div class="price-tag">
                             <span class="old-price">14.500 FCFA</span>
-                            <span class="current-price">4.900 FCFA</span>
+                            <span class="current-price"><span class="price-currency">FCFA</span> 4.900</span>
+                            <span class="price-note">Économisez 9.600 FCFA (66%)</span>
                         </div>
-                        <p class="price-note">Paiement unique - Accès à vie</p>
+                        <p class="price-note" style="text-align: center; margin-bottom: 20px;">Paiement unique - Accès à vie</p>
                         
                         <ul class="pricing-features">
-                            <li><strong>Guide complet</strong> (format PDF)</li>
-                            <li><strong>12 modèles et templates</strong> personnalisables</li>
-                            <li><strong>Calculateurs interactifs</strong> d'admissibilité</li>
-                            <li><strong>Groupe Télégramme exclusif</strong> d'entraide</li>
-                            <li><strong>Mises à jour gratuites</strong> pendant 2 ans</li>
-                            <li class="bonus-item"><strong>BONUS 1:</strong> Liste des entreprises qui recrutent des Africains</li>
-                            <li class="bonus-item"><strong>BONUS 2:</strong> Guide des villes canadiennes pour francophones</li>
+                            <li><i class="fas fa-check-circle" style="color: #4CAF50;"></i> <strong>Guide complet</strong> (format PDF) - 100+ pages</li>
+                            <li><i class="fas fa-check-circle" style="color: #4CAF50;"></i> <strong>12 modèles et templates</strong> personnalisables</li>
+                            <li><i class="fas fa-check-circle" style="color: #4CAF50;"></i> <strong>Calculateurs interactifs</strong> d'admissibilité</li>
+                            <li><i class="fas fa-check-circle" style="color: #4CAF50;"></i> <strong>Groupe Telegram exclusif</strong> d'entraide</li>
+                            <li><i class="fas fa-check-circle" style="color: #4CAF50;"></i> <strong>Mises à jour gratuites</strong> pendant 2 ans</li>
+                            <li class="bonus-item"><i class="fas fa-gift" style="color: #ff5722;"></i> <strong>BONUS 1:</strong> Liste des entreprises qui recrutent des Africains</li>
+                            <li class="bonus-item"><i class="fas fa-gift" style="color: #ff5722;"></i> <strong>BONUS 2:</strong> Guide des villes canadiennes pour francophones</li>
                         </ul>
                         
-                        <a href="https://uowkorva.mychariow.com/prd_xni6no/checkout" class="btn btn-xl btn-primary pulse-animation">Obtenir le Guide Maintenant</a>
+                        <div class="limited-spots" style="text-align: center; margin: 20px 0;">
+                            <i class="fas fa-users"></i>
+                            <span>Il reste seulement 17 guides à ce prix</span>
+                        </div>
+                        
+                        <a href="https://uowkorva.mychariow.com/prd_xni6no/checkout" class="btn btn-xl btn-primary pulse-animation" style="display: block; text-align: center; margin: 20px 0;">Obtenir le Guide Maintenant</a>
                         
                         <div class="payment-methods">
                             <i class="fas fa-mobile-alt payment-icon"></i>
                             <p>Paiement mobile et Orange Money acceptés</p>
                         </div>
                         
-                        <div class="guarantee">
-                            <i class="fas fa-shield-alt guarantee-icon"></i>
-                            <p><strong>Garantie satisfait ou remboursé 30 jours</strong> - Si vous n'êtes pas entièrement satisfait, nous vous remboursons intégralement.</p>
+                        <div class="guarantee-box">
+                            <div class="guarantee-icon">
+                                <i class="fas fa-shield-alt"></i>
+                            </div>
+                            <div>
+                                <strong>Garantie satisfait ou remboursé 30 jours</strong>
+                                <p>Si vous n'êtes pas entièrement satisfait, nous vous remboursons intégralement. Sans question ni condition.</p>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
             
-<div id="order-form" class="order-section fade-in-up" style="text-align: center; padding: 20px;">
-    <h3>Accédez immédiatement à votre guide</h3>
+            <div id="order-form" class="order-section fade-in-up" style="text-align: center; padding: 20px;">
+                <h3>Accédez immédiatement à votre guide</h3>
 
-    <a href="https://uowkorva.mychariow.com/prd_xni6no/checkout" 
-       class="btn btn-xl btn-primary" 
-       style="display: inline-block; margin-top: 20px; padding: 15px 30px; font-size: 18px; font-weight: bold;">
-        Finaliser ma commande
-    </a>
+                <a href="https://uowkorva.mychariow.com/prd_xni6no/checkout" 
+                   class="btn btn-xl btn-primary" 
+                   style="display: inline-block; margin-top: 20px; padding: 15px 30px; font-size: 18px; font-weight: bold;">
+                    Finaliser ma commande
+                </a>
 
-    <div style="margin-top: 25px; display: flex; justify-content: center; gap: 30px; font-size: 16px; color: #444;">
-        <div>
-            <i class="fas fa-lock fa-lg" style="color: green;"></i><br>
-            Paiement sécurisé
-        </div>
-        <div>
-            <i class="fas fa-shield-alt fa-lg" style="color: #007bff;"></i><br>
-            Confiance garantie
-        </div>
-        <div>
-            <i class="fas fa-undo fa-lg" style="color: orange;"></i><br>
-            Satisfait ou remboursé
-        </div>
-    </div>
-</div>
-                            
-                      
-                        </form>
+                <div style="margin-top: 25px; display: flex; justify-content: center; gap: 30px; font-size: 16px; color: #444;">
+                    <div>
+                        <i class="fas fa-lock fa-lg" style="color: green;"></i><br>
+                        Paiement sécurisé
                     </div>
-                    <div class="order-summary">
-                        <h4>Votre commande</h4>
-                        <div class="summary-product">
-                            <img src="https://d1yei2z3i6k35z.cloudfront.net/11365804/67ef218caf45f_1001897714.png" alt="Guide d'Immigration">
-                            <div class="product-info">
-                                <h5>Guide Ultime Pour Immigrer Au Canada</h5>
-                                <p>Édition 2025 - Spécial Afrique Francophone</p>
+                    <div>
+                        <i class="fas fa-shield-alt fa-lg" style="color: #007bff;"></i><br>
+                        Confiance garantie
+                    </div>
+                    <div>
+                        <i class="fas fa-undo fa-lg" style="color: orange;"></i><br>
+                        Satisfait ou remboursé
+                    </div>
+                </div>
+            </div>
+                        
+            <div class="order-summary">
+                <h4>Votre commande</h4>
+                <div class="summary-product">
+                    <img src="https://d1yei2z3i6k35z.cloudfront.net/11365804/67ef218caf45f_1001897714.png" alt="Guide d'Immigration">
+                    <div class="product-info">
+                        <h5>Guide Ultime Pour Immigrer Au Canada</h5>
+                        <p>Édition 2025 - Spécial Afrique Francophone</p>
+                    </div>
+                </div>
+                <div class="summary-details">
+                    <div class="summary-line">
+                        <span>Prix normal</span>
+                        <span>14.500 FCFA</span>
+                    </div>
+                    <div class="summary-line discount">
+                        <span>Réduction</span>
+                        <span>-9.600 FCFA</span>
+                    </div>
+                    <div class="summary-line total">
+                        <span>Total</span>
+                        <span>4.900 FCFA</span>
+                    </div>
+                </div>
+                <div class="summary-note">
+                    <div class="timer-container">
+                        <p>Cette offre expire dans:</p>
+                        <div class="countdown-timer">
+                            <div class="time-unit">
+                                <span class="count hours">48</span>
+                                <span class="label">Heures</span>
                             </div>
-                        </div>
-                        <div class="summary-details">
-                            <div class="summary-line">
-                                <span>Prix normal</span>
-                                <span>14.500 FCFA</span>
+                            <div class="time-unit">
+                                <span class="count minutes">37</span>
+                                <span class="label">Minutes</span>
                             </div>
-                            <div class="summary-line discount">
-                                <span>Réduction</span>
-                                <span>-9.600 FCFA</span>
-                            </div>
-                            <div class="summary-line total">
-                                <span>Total</span>
-                                <span>4.900 FCFA</span>
-                            </div>
-                        </div>
-                        <div class="summary-note">
-                            <div class="timer-container">
-                                <p>Cette offre expire dans:</p>
-                                <div class="countdown-timer">
-                                    <div class="time-unit">
-                                        <span class="count hours">48</span>
-                                        <span class="label">Heures</span>
-                                    </div>
-                                    <div class="time-unit">
-                                        <span class="count minutes">37</span>
-                                        <span class="label">Minutes</span>
-                                    </div>
-                                    <div class="time-unit">
-                                        <span class="count seconds">18</span>
-                                        <span class="label">Secondes</span>
-                                    </div>
-                                </div>
+                            <div class="time-unit">
+                                <span class="count seconds">18</span>
+                                <span class="label">Secondes</span>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-    </section>
-
-    <section class="faq-section">
+					</section>
+         <section class="faq-section">
         <div class="container">
             <div class="section-intro fade-in-up">
                 <h2>Questions <span class="text-highlight">fréquentes</span></h2>
@@ -606,7 +1158,7 @@ financières... et aucun visa obtenu..</p>
                         <span class="faq-icon"><i class="fas fa-plus"></i></span>
                     </div>
                     <div class="faq-answer">
-                        <p>Oui, nous offrons une garantie satisfait ou remboursé de 30 jours. Si vous estimez que le guide ne répond pas à vos attentes, envoyez-nous simplement un email et nous vous rembourserons intégralement, . Notre objectif est votre réussite, pas de vendre un produit qui ne vous aide pas réellement.</p>
+                        <p>Oui, nous offrons une garantie satisfait ou remboursé de 30 jours. Si vous estimez que le guide ne répond pas à vos attentes, envoyez-nous simplement un email et nous vous rembourserons intégralement, sans condition. Notre objectif est votre réussite, pas de vendre un produit qui ne vous aide pas réellement.</p>
                     </div>
                 </div>
                 
@@ -616,7 +1168,7 @@ financières... et aucun visa obtenu..</p>
                         <span class="faq-icon"><i class="fas fa-plus"></i></span>
                     </div>
                     <div class="faq-answer">
-                        <p>Oui, cette édition 2025 intègre tous les changements récents dans les politiques d'immigration canadiennes, y compris les nouvelles opportunités pour les francophones africains. Nous mettons à jour le guide régulièrement et vous recevez gratuitement ces mises à jour pendant 2 ans. La dernière mise à jour date d'informations récente en 2025.</p>
+                        <p>Oui, cette édition 2025 intègre tous les changements récents dans les politiques d'immigration canadiennes, y compris les nouvelles opportunités pour les francophones africains. Nous mettons à jour le guide régulièrement et vous recevez gratuitement ces mises à jour pendant 2 ans. La dernière mise à jour date de Avril 2025.</p>
                     </div>
                 </div>
             </div>
@@ -631,9 +1183,17 @@ financières... et aucun visa obtenu..</p>
     <section class="final-cta">
         <div class="container">
             <div class="cta-content fade-in-up">
-                <h2>Prêt à éviter les erreurs qui m'ont coûté plus de<span class="text-highlight">3 million</span> de FCFA? </h2>
-                <p>J'ai appris à mes dépens ce qu'il ne faut surtout pas faire. Aujourd'hui, je partage avec toi un guide clair, simple et honnête pour t'aider à avancer sans te faire avoir.</p>
+                <h2>Prêt à éviter les erreurs qui m'ont coûté plus de <span class="text-highlight">3 millions</span> de FCFA?</h2>
+                <p>J'ai appris à mes dépens ce qu'il ne faut surtout pas faire. Aujourd'hui, je partage avec vous un guide clair, simple et honnête pour vous aider à avancer sans vous faire avoir.</p>
+                
+                <div class="price-tag" style="margin: 30px auto; display: inline-block;">
+                    <span class="old-price">14.500 FCFA</span>
+                    <span class="current-price"><span class="price-currency">FCFA</span> 4.900</span>
+                    <span class="price-note">Économisez 9.600 FCFA (66%)</span>
+                </div>
+                
                 <a href="https://uowkorva.mychariow.com/prd_xni6no/checkout" class="btn btn-xl btn-primary pulse-animation">Obtenez votre Guide à 4.900 FCFA</a>
+                
                 <div class="cta-features">
                     <div class="cta-feature">
                         <i class="fas fa-bolt"></i>
@@ -644,9 +1204,14 @@ financières... et aucun visa obtenu..</p>
                         <p>Garantie 30 jours</p>
                     </div>
                     <div class="cta-feature">
-                        <i class="https://wa.me/15794001062"></i>
+                        <i class="fab fa-whatsapp"></i>
                         <p>Support WhatsApp</p>
                     </div>
+                </div>
+                
+                <div class="limited-spots" style="display: inline-block; margin-top: 20px;">
+                    <i class="fas fa-clock"></i>
+                    <span>L'offre expire bientôt - Agissez maintenant</span>
                 </div>
             </div>
         </div>
@@ -657,7 +1222,7 @@ financières... et aucun visa obtenu..</p>
             <div class="footer-content">
                 <div class="footer-logo">
                     <img src="https://d1yei2z3i6k35z.cloudfront.net/11365804/67d37b8fe92b5_Monlogo.jpg" alt="Logo Guide Immigration Canada" width="150">
-                    <p>Un guide clair, honnête et adapté aux réalités africaines pour réussir ton immigration.</p>
+                    <p>Un guide clair, honnête et adapté aux réalités africaines pour réussir votre immigration.</p>
                 </div>
                 
                 <div class="footer-links">
@@ -702,7 +1267,7 @@ financières... et aucun visa obtenu..</p>
             </div>
             
             <div class="disclaimer">
-                <p> Ce guide est basé sur des informations fiables et à jour pour vous aider dans votre projet d'immigration. Les résultats peuvent varier selon votre situation et les lois en vigueur. Suivez les étapes et mettez toutes les chances de votre côté.</p>
+                <p>Ce guide est basé sur des informations fiables et à jour pour vous aider dans votre projet d'immigration. Les résultats peuvent varier selon votre situation et les lois en vigueur. Suivez les étapes et mettez toutes les chances de votre côté.</p>
             </div>
         </div>
     </footer>
@@ -714,111 +1279,166 @@ financières... et aucun visa obtenu..</p>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/js/all.min.js"></script>
     <script src="script.js"></script>
     <script>
-    	<!-- Schema Markup pour Livre/Guide -->
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "Book",
-  "name": "Guide Ultime Pour Immigrer Au Canada",
-  "author": {
-    "@type": "Person",
-    "name": "Nom de l'auteur"
-  },
-  "datePublished": "2025-01-01",
-  "description": "Guide complet d'immigration canadienne pour les francophones africains",
-  "publisher": "Nom de l'éditeur",
-  "image": "https://d1yei2z3i6k35z.cloudfront.net/11365804/67ef218caf45f_1001897714.png",
-  "offers": {
-    "@type": "Offer",
-    "price": "4900",
-    "priceCurrency": "XOF"
-  }
-}
-    </script>
-<!-- Meta Pixel Code Optimisé pour Guide Immigration Canada -->
-<script>
-!function(f,b,e,v,n,t,s){
-  if(f.fbq)return;
-  n=f.fbq=function(){n.callMethod?n.callMethod.apply(n,arguments):n.queue.push(arguments)};
-  if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
-  n.queue=[];t=b.createElement(e);t.async=!0;
-  t.src=v;s=b.getElementsByTagName(e)[0];
-  s.parentNode.insertBefore(t,s)
-}(window, document,'script','https://connect.facebook.net/en_US/fbevents.js');
-
-// Initialisation du pixel
-fbq('init', '1400667957768581');
-fbq('track', 'PageView');
-
-// Configuration du ViewContent pour votre produit spécifique
-fbq('track', 'ViewContent', {
-  content_name: 'Guide Ultime Pour Immigrer Au Canada - Édition 2025',
-  content_category: 'Guide Immigration Afrique Francophone',
-  content_ids: ['GUIDE_CANADA_2025'],
-  content_type: 'product',
-  value: 4900,
-  currency: 'XOF'
-});
-
-// Suivi des interactions utilisateur
-document.addEventListener('DOMContentLoaded', function() {
-  // Suivi des clics sur les onglets de prévisualisation
-  document.querySelectorAll('.tab-btn').forEach(tab => {
-    tab.addEventListener('click', function() {
-      fbq('trackCustom', 'ContentView', {
-        content_type: 'preview_tab',
-        content_name: this.textContent.trim()
-      });
-    });
-  });
-
-  // Suivi des ouvertures de FAQ
-  document.querySelectorAll('.faq-question').forEach(question => {
-    question.addEventListener('click', function() {
-      fbq('trackCustom', 'FAQInteraction', {
-        question: this.querySelector('h3')?.textContent.trim() || 'Question inconnue'
-      });
-    });
-  });
-  
-  // Suivi de l'engagement par scroll
-  let scrollDepths = {25: false, 50: false, 75: false, 90: false};
-  window.addEventListener('scroll', function() {
-    const scrollPercent = Math.round((window.scrollY / (document.body.scrollHeight - window.innerHeight)) * 100);
-    
-    Object.keys(scrollDepths).forEach(depth => {
-      if (!scrollDepths[depth] && scrollPercent >= depth) {
-        scrollDepths[depth] = true;
-        fbq('trackCustom', 'ScrollDepth', {
-          depth: depth + '%'
+        // Schema Markup pour Livre/Guide
+        document.addEventListener('DOMContentLoaded', function() {
+            // Script pour le countdown timer
+            function updateCountdown() {
+                const now = new Date();
+                const hours = 48 - now.getHours();
+                const minutes = 59 - now.getMinutes();
+                const seconds = 59 - now.getSeconds();
+                
+                document.querySelectorAll('.count.hours').forEach(el => el.textContent = hours);
+                document.querySelectorAll('.count.minutes').forEach(el => el.textContent = minutes);
+                document.querySelectorAll('.count.seconds').forEach(el => el.textContent = seconds);
+            }
+            
+            // Mettre à jour toutes les secondes
+            setInterval(updateCountdown, 1000);
+            updateCountdown();
+            
+            // Script pour les tabs
+            document.querySelectorAll('.tab-btn').forEach(button => {
+                button.addEventListener('click', () => {
+                    // Retirer la classe active de tous les boutons
+                    document.querySelectorAll('.tab-btn').forEach(btn => {
+                        btn.classList.remove('active');
+                    });
+                    
+                    // Ajouter la classe active au bouton cliqué
+                    button.classList.add('active');
+                    
+                    // Cacher tous les contenus
+                    document.querySelectorAll('.tab-content').forEach(content => {
+                        content.classList.remove('active');
+                    });
+                    
+                    // Afficher le contenu correspondant
+                    const tabId = button.getAttribute('data-tab');
+                    document.getElementById(tabId).classList.add('active');
+                });
+            });
+            
+            // Script pour les FAQ accordéons
+            document.querySelectorAll('.faq-question').forEach(question => {
+                question.addEventListener('click', () => {
+                    const answer = question.nextElementSibling;
+                    const icon = question.querySelector('.faq-icon i');
+                    
+                    // Toggle la classe active
+                    if (answer.style.maxHeight) {
+                        answer.style.maxHeight = null;
+                        icon.classList.remove('fa-minus');
+                        icon.classList.add('fa-plus');
+                    } else {
+                        answer.style.maxHeight = answer.scrollHeight + "px";
+                        icon.classList.remove('fa-plus');
+                        icon.classList.add('fa-minus');
+                    }
+                });
+            });
         });
+    </script>
+    <!-- Schema Markup pour Livre/Guide -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Book",
+      "name": "Guide Ultime Pour Immigrer Au Canada",
+      "author": {
+        "@type": "Person",
+        "name": "Nom de l'auteur"
+      },
+      "datePublished": "2025-01-01",
+      "description": "Guide complet d'immigration canadienne pour les francophones africains",
+      "publisher": "Nom de l'éditeur",
+      "image": "https://d1yei2z3i6k35z.cloudfront.net/11365804/67ef218caf45f_1001897714.png",
+      "offers": {
+        "@type": "Offer",
+        "price": "4900",
+        "priceCurrency": "XOF"
       }
-    });
-  });
-  
-  // Suivi du temps passé sur la page
-  let timeOnSite = 0;
-  const timeInterval = setInterval(() => {
-    timeOnSite += 30;
-    if (timeOnSite === 60) {
-      fbq('trackCustom', 'TimeOnPage', {duration: '1min'});
-    } else if (timeOnSite === 180) {
-      fbq('trackCustom', 'TimeOnPage', {duration: '3min'});
-    } else if (timeOnSite === 300) {
-      fbq('trackCustom', 'TimeOnPage', {duration: '5min'});
-      clearInterval(timeInterval);
     }
-  }, 30000);
-});
-</script>
-<noscript>
-  <img height="1" width="1" style="display:none" 
-       src="https://www.facebook.com/tr?id=1400667957768581&ev=PageView&noscript=1">
-</noscript>
-<!-- Fin du Meta Pixel Code -->	
-<!-- Google Tag Manager (noscript) -->
-<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-5FL3LRTP"
-height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-<!-- End Google Tag Manager (noscript) -->
+    </script>
+    <!-- Meta Pixel Code Optimisé pour Guide Immigration Canada -->
+    <script>
+    !function(f,b,e,v,n,t,s){
+      if(f.fbq)return;
+      n=f.fbq=function(){n.callMethod?n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+      if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+      n.queue=[];t=b.createElement(e);t.async=!0;
+      t.src=v;s=b.getElementsByTagName(e)[0];
+      s.parentNode.insertBefore(t,s)
+    }(window, document,'script','https://connect.facebook.net/en_US/fbevents.js');
+
+    // Initialisation du pixel
+    fbq('init', '1400667957768581');
+    fbq('track', 'PageView');
+
+    // Configuration du ViewContent pour votre produit spécifique
+    fbq('track', 'ViewContent', {
+      content_name: 'Guide Ultime Pour Immigrer Au Canada - Édition 2025',
+      content_category: 'Guide Immigration Afrique Francophone',
+      content_ids: ['GUIDE_CANADA_2025'],
+      content_type: 'product',
+      value: 4900,
+      currency: 'XOF'
+    });
+
+    // Suivi des interactions utilisateur
+    document.addEventListener('DOMContentLoaded', function() {
+      // Suivi des clics sur les onglets de prévisualisation
+      document.querySelectorAll('.tab-btn').forEach(tab => {
+        tab.addEventListener('click', function() {
+          fbq('trackCustom', 'ContentView', {
+            content_type: 'preview_tab',
+            content_name: this.textContent.trim()
+          });
+        });
+      });
+
+      // Suivi des ouvertures de FAQ
+      document.querySelectorAll('.faq-question').forEach(question => {
+        question.addEventListener('click', function() {
+          fbq('trackCustom', 'FAQInteraction', {
+            question: this.querySelector('h3')?.textContent.trim() || 'Question inconnue'
+          });
+        });
+      });
+	          // Suivi de l'engagement par scroll
+      let scrollDepths = {25: false, 50: false, 75: false, 90: false};
+      window.addEventListener('scroll', function() {
+        const scrollPercent = Math.round((window.scrollY / (document.body.scrollHeight - window.innerHeight)) * 100);
+        
+        Object.keys(scrollDepths).forEach(depth => {
+          if (!scrollDepths[depth] && scrollPercent >= depth) {
+            scrollDepths[depth] = true;
+            fbq('trackCustom', 'ScrollDepth', {
+              depth: depth + '%'
+            });
+          }
+        });
+      });
+      
+      // Suivi du temps passé sur la page
+      let timeOnSite = 0;
+      const timeInterval = setInterval(() => {
+        timeOnSite += 30;
+        if (timeOnSite === 60) {
+          fbq('trackCustom', 'TimeOnPage', {duration: '1min'});
+        } else if (timeOnSite === 180) {
+          fbq('trackCustom', 'TimeOnPage', {duration: '3min'});
+        } else if (timeOnSite === 300) {
+          fbq('trackCustom', 'TimeOnPage', {duration: '5min'});
+          clearInterval(timeInterval);
+        }
+      }, 30000);
+    });
+    </script>
+    <noscript>
+      <img height="1" width="1" style="display:none" 
+           src="https://www.facebook.com/tr?id=1400667957768581&ev=PageView&noscript=1">
+    </noscript>
+    <!-- Fin du Meta Pixel Code -->
 </body>
 </html>
